@@ -76,3 +76,35 @@ function getMeaning(sR) {
         return "Tied";
     }
 }
+
+function game() 
+{
+    let playerScore = 0;
+    let computerScore = 0;
+    for (i = 0; i < 5; i++)
+    {
+        let cC = getComputerChoice();
+        let pC = prompt("Please enter one of: rock, paper, scissors");
+        while (pC !== "rock" && pC !== "paper" && pC !== "scissors")
+        {
+            pC = prompt("Please enter one of: rock, paper, scissors exactly as shown on screen");
+        }
+        let sR = singleRound(pC, cC);
+        let gM = getMeaning(sR);
+        if (gM == "Win") {
+            playerScore += 1;
+        }
+        else if (gM == "Lose") {
+            computerScore += 1;
+        }
+    }
+    if (playerScore > computerScore) {
+        console.log("YOU WIN! WOOOO");
+    }
+    else if (computerScore > playerScore) {
+        console.log("you lost oof");
+    }
+    else {
+        console.log("YOU TIED EH");
+    }
+}
