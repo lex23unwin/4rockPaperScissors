@@ -60,3 +60,19 @@ function singleRound(playerSelection, computerSelection, playerScore, computerSc
         return `You Tie! ${playerSelection} ties ${computerSelection}`;
     }
 }
+
+function getMeaning(sR) {
+    let sRslice = sR.slice(0,7);
+    if (sRslice === "You Los")
+    {
+        return "Lose"
+    }
+    else if (sRslice === "You Win")
+    {
+        return "Win"
+    }
+    else /*You Tie*/
+    {
+        return "Tied";
+    }
+}
