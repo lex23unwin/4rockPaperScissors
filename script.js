@@ -18,23 +18,15 @@ function computerSelector() {
 }
 
 buttons.forEach( (button) => {
-    button.addEventListener("click", clickBtn)
+    button.addEventListener("click", () => 
+    {
+        playerChoice = button.id;
+        computerChoice = computerSelector();
+        singleRound(playerChoice, computerChoice);
+    })
 })
 
-function clickBtn(e) 
-{
-    playerChoice = e.target.id;
-    computerChoice = computerSelector();
-    singleRound(playerChoice, computerChoice);
-}
 
-function gameOver() 
-{
-    buttons.forEach( (button) => 
-    {
-        button.removeEventListener("click", clickBtn);
-    })
-}
 function singleRound(playerChoice, computerChoice)
 {
     if ((playerChoice == "rock" && computerChoice == "scissors") 
@@ -61,12 +53,10 @@ function singleRound(playerChoice, computerChoice)
     if (playerScore == WINNING_SCORE)
     {
         roundResults.textContent = "You win";
-        gameOver();
     } 
     else if (computerScore == WINNING_SCORE)
     {
         roundResults.textContent = "You lose";
-        gameOver();
     }
 }
 
