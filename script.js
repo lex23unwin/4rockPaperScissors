@@ -2,7 +2,7 @@ let computerOptions = ["rock", "paper", "scissors"]
 let playerScore = 0;
 let computerScore = 0;
 const WINNING_SCORE = 5;
-
+ 
 let computerChoice;
 let playerChoice;
 

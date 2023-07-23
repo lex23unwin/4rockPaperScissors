@@ -17,6 +17,14 @@ body {
     align-items: center;
 }
 
+h1 {
+    background-color: yellow;
+}
+
+h2 {
+    margin-top: 25px;
+    text-decoration: underline;
+}
 
 button {
     border-radius: 10px;
