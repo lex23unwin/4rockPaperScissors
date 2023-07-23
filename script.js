@@ -12,12 +12,14 @@ const computerTotal = document.querySelector("#computer-total");
 
 const buttons = Array.from(document.querySelectorAll(".button"));
 
-function computerSelector() {
+function computerSelector() 
+{
     let index = Math.floor(Math.random() * computerOptions.length)
     return computerOptions[index];
 }
 
-buttons.forEach( (button) => {
+buttons.forEach( (button) => 
+{
     button.addEventListener("click", () => 
     {
         playerChoice = button.id;
