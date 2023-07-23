@@ -1,30 +1,41 @@
-let computerOptions = ["Rock", "Paper", "Scissors"];
-const WINNING_TOTAL = 5;
+let computerOptions = ["rock", "paper", "scissors"]
 let playerScore = 0;
 let computerScore = 0;
-let playerChoice;
+const WINNING_SCORE = 5;
+
 let computerChoice;
+let playerChoice;
 
-const buttons = Array.from(document.querySelectorAll("button"));
+const roundResults = document.querySelector("#game-updates");
+const playerTotal = document.querySelector("#player-total");
+const computerTotal = document.querySelector("#computer-total");
 
-buttons.forEach((button) => 
-{
+const buttons = Array.from(document.querySelectorAll(".button"));
+
+function computerSelector() {
+    let index = Math.floor(Math.random() * computerOptions.length)
+    return computerOptions[index];
+}
+
+buttons.forEach( (button) => {
     button.addEventListener("click", clickBtn)
 })
 
 function clickBtn(e) 
 {
     playerChoice = e.target.id;
-    computerChoice = computerSelection();
-    playRound(playerChoice, computerChoice);
+    computerChoice = computerSelector();
+    singleRound(playerChoice, computerChoice);
 }
 
-function computerSelection()
+function gameOver() 
 {
-    return computerOptions[Math.floor(Math.random * computerOptions.length)]
+    buttons.forEach( (button) => 
+    {
+        button.removeEventListener("click", clickBtn);
+    })
 }
-
-function playRound(playerChoice, computerChoice) 
+function singleRound(playerChoice, computerChoice)
 {
     if ((playerChoice == "rock" && computerChoice == "scissors") 
             || (playerChoice == "scissors" && computerChoice == "paper")
@@ -59,9 +70,3 @@ function playRound(playerChoice, computerChoice)
     }
 }
 
-function gameOver() {
-    buttons.forEach((button) =>
-    {
-        button.removeEventListener("click", clickBtn)
-    })
-}

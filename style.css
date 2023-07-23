@@ -31,4 +31,8 @@ button {
 .results {
     background-color: lime;
     min-height: 200px;
+    color: black;
+    font-size: 36px;
+    padding: 15px;
+    text-align: center;
 }
