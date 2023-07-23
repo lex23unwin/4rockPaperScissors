@@ -28,7 +28,6 @@ buttons.forEach( (button) =>
     })
 })
 
-
 function singleRound(playerChoice, computerChoice)
 {
     if ((playerChoice == "rock" && computerChoice == "scissors") 
