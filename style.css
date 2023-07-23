@@ -15,8 +15,8 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
 }
+
 
 button {
     border-radius: 10px;
