@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RockPaperScissors</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Let's Play Rock Paper Scissors!</h1>
-    <h2> First Player To Five Wins!</h2>
-    <div class="options">
-        <button class="button" id="rock">Rock</button>
-        <button class="button" id="paper">Paper</button>
-        <button class="button" id="scissors">Scissors</button>
-    </div>
-    <div class="results">
-        <p id="player-total">Player score: 0</p>
-        <p id="computer-total">Computer score: 0</p>
-        <p id="game-updates">Let's play rock, paper, scissors!</p>
-    </div>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RockPaperScissors - Odin Project</title>
+</head>
+<body>
+    <header>
+      <h1>Let's Play: Rock Paper Scissors!</h1>
+      <h3 class="explanation">First player to win five games wins the match!
+      Click on one of the options below to play a round against
+      the computer.
+      </h3>
+    </header>
+    <main>
+        <div class="images-container">
+            <div class="image-container">
+                <img src="https://www.pngfind.com/pngs/m/56-563277_rock-paper-scissors-png-rock-paper-scissors-clipart.png" alt="rock" id="Rock">
+            </div>
+            <div class="image-container" >
+                <img src="https://www.vhv.rs/dpng/d/490-4906131_rock-paper-scissors-clipart-rock-paper-scissors-png.png" alt="paper" id="Paper">
+            </div>
+            <div class="image-container">
+                <img src="https://www.seekpng.com/png/detail/111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png" alt="scissors" id="Scissors">
+            </div>
+        </div>
+        <div class="results-container">
+            <div class="game-results">
+                Last game results: _______
+            </div>
+            <div class="game-standings">
+                Game standings: _______
+            </div>
+            <button class="play-again">Play again?</button>
+        </div>
+    </main>
+    <footer>
+      <h1>Alexander Unwin - Odin Project - Summer 2023</h1>
+    </footer>
+</body>
 </html>
